@@ -7,11 +7,6 @@ WORKDIR /usr/src/app
 COPY . .
 
 # Install SQLITE3 on ubuntu
-RUN apt-get update && sudo apt-get upgrade
-RUN apt-get install sqlite3 libsqlite3-dev
+RUN apt-get -y update && apt-get -y upgrade && apt-get -y install sqlite3 libsqlite3-dev && apt-get -y install build-essential
 
-# Compile
-RUN make build
-
-# run tests and main
-CMD ["make test", "./app"]
+CMD ["make test", "make run"]
