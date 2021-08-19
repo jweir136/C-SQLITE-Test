@@ -1,8 +1,6 @@
 #include <iostream>
-using namespace std;
+#include <sqlite3.h>
 
 int main() {
-    cout << "Hello, World!" << endl;
-
-    return (0);
+    
 }
